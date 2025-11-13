@@ -6,11 +6,13 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 13:32:04 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/08 14:05:37 by ayhammou         ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 15:42:40 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	atoi(const char *str)
+#include "libft.h"
+
+int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	res;
@@ -19,19 +21,19 @@ int	atoi(const char *str)
 	i = 0;
 	res = 0;
 	signe = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
 		i++;
-	if (str[i] == '+' || str[i] == '-')
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
-		if (str[i] == '-')
+		if (nptr[i] == '-')
 			signe = -1;
 		i++;
-		if (str[i] == '+' || str[i] == '-')
+		if (nptr[i] == '+' || nptr[i] == '-')
 			return (0);
 	}
-	while (str[i] >= 48 && str[i] <= 57)
+	while (nptr[i] >= 48 && nptr[i] <= 57)
 	{
-		res = (res * 10) + (str[i] - '0');
+		res = (res * 10) + (nptr[i] - '0');
 		i++;
 	}
 	return (res * signe);

@@ -6,9 +6,11 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 14:38:50 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/07 12:52:05 by ayhammou         ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 15:03:12 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

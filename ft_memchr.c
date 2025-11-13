@@ -6,9 +6,11 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 17:27:01 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/08 11:35:03 by ayhammou         ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 14:52:36 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

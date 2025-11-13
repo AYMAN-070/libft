@@ -6,10 +6,12 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 10:18:51 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/10 11:57:20 by ayhammou         ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 14:51:13 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdlib.h>
+#include "libft.h"
 
 char	*copy_str(char const *s, unsigned int start, size_t alloc)
 {

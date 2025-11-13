@@ -6,11 +6,13 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 14:04:19 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/05 14:33:22 by ayhammou         ###   ########lyon.fr   */
+/*   Updated: 2025/11/13 13:52:53 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isascii(int c)
 {
-	return (c >= 0 && c <= 177);
+	return (c >= 0 && c <= 127);
 }

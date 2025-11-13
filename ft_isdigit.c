@@ -6,9 +6,11 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 13:59:42 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/05 14:01:11 by ayhammou         ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 14:52:42 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

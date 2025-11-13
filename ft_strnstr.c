@@ -6,28 +6,30 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 12:05:22 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/08 13:35:12 by ayhammou         ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 17:25:20 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+#include "libft.h"
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
-	if (*needle == '\0')
-		return ((char *) haystack);
-	while (haystack[i] && i < len)
+	if (*little == '\0')
+		return ((char *) big);
+	while (big[i] && i < len)
 	{
 		j = 0;
-		if (haystack[i] == needle[j])
+		if (big[i] == little[j])
 		{
-			while (haystack[i + j] == needle[j] && i + j < len)
+			while (big[i + j] == little[j] && i + j < len)
 			{
 				j++;
-				if (needle[j] == '\0')
-					return ((char *)&haystack[i]);
+				if (little[j] == '\0')
+					return ((char *)&big[i]);
 			}
 		}
 		i++;
@@ -40,6 +42,6 @@ int	main(void)
 {
 	const char *s = "VUOTOTOFI";
 	const char *n = "TO";
-	printf("%s", ft_strnstr(s, n, 10));
+	printf("%s", ft_strnstr(s, n, 5));
 	return (0);
 }*/

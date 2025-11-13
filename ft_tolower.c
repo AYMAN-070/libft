@@ -6,9 +6,12 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 15:38:59 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/07 15:41:16 by ayhammou         ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 14:48:49 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
 int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)

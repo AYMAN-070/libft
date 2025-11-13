@@ -6,9 +6,11 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 16:17:56 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/08 11:13:38 by ayhammou         ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 14:51:35 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

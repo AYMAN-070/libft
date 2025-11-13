@@ -6,9 +6,11 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 15:54:55 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/07 16:17:30 by ayhammou         ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 14:51:25 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
