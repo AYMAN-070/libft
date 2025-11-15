@@ -6,7 +6,7 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 18:21:48 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/12 18:35:22 by ayhammou         ###   ########.fr       */
+/*   Updated: 2025/11/14 17:12:56 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (i < slen)
 	{
-		str[i] = f(i, s[i]);
+		if (f == 0)
+			str[i] = s[i];
+		else
+			str[i] = f(i, s[i]);
 		i++;
 	}
 	str[i] = '\0';

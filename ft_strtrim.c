@@ -6,7 +6,7 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 12:29:59 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/12 14:51:21 by ayhammou         ###   ########.fr       */
+/*   Updated: 2025/11/14 16:34:11 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	inset(char c, const char *set)
 	return (0);
 }
 
-char	*newstr(char *str, const char *s1, size_t start, size_t slen)
+static char	*newstr(char *str, const char *s1, size_t start, size_t slen)
 {
 	size_t	i;
 
@@ -49,7 +49,9 @@ char	*ft_strtrim(const char *s1, const char *set)
 	start = 0;
 	end = 0;
 	slen = 0;
-	if (s1 == 0 || set == 0)
+	if (set == 0)
+		set = "";
+	if (s1 == 0)
 		return (NULL);
 	while (s1[slen])
 		slen++;

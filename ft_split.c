@@ -6,14 +6,14 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 15:50:12 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/13 16:05:49 by ayhammou         ###   ########.fr       */
+/*   Updated: 2025/11/15 14:36:30 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int	wordsnumb(const char *s, char c)
+static int	wordsnumb(const char *s, char c)
 {
 	int	i;
 	int	x;
@@ -36,7 +36,7 @@ int	wordsnumb(const char *s, char c)
 	return (counter);
 }
 
-char	*fillword(const char *s, int fword, int i)
+static char	*fillword(const char *s, int fword, int i)
 {
 	int		j;
 	char	*word;
@@ -54,7 +54,7 @@ char	*fillword(const char *s, int fword, int i)
 	return (word);
 }
 
-void	*ft_free(char **array, int j)
+static void	*ft_free(char **array, int j)
 {
 	int	i;
 
@@ -68,39 +68,44 @@ void	*ft_free(char **array, int j)
 	return (NULL);
 }
 
-void	var_declar(size_t *i, int *j, int *fword)
+static int	loop_split(char **array, const char *s, char c)
 {
-	*i = 0;
-	*j = 0;
-	*fword = -1;
-}
-
-char	**ft_split(const char *s, char c)
-{
-	char	**array;
 	size_t	i;
 	int		j;
 	int		fword;
 
-	var_declar(&i, &j, &fword);
-	array = malloc(sizeof(char *) * (wordsnumb(s, c) + 1));
-	if (array == 0)
-		return (NULL);
+	i = 0;
+	j = 0;
+	fword = -1;
 	while (i <= ft_strlen(s))
 	{
 		if (s[i] != c && fword == -1)
 			fword = i;
-		if ((s[i] == c || (i == ft_strlen(s))) && fword != -1
-			&& (i - fword > 0))
+		if ((s[i] == c || i == ft_strlen(s)) && fword != -1 && i - fword > 0)
 		{
-			array[j++] = fillword(s, fword, i);
-			if (array[j - 1] == 0)
-				return (ft_free(array, j - 1));
+			array[j] = fillword(s, fword, i);
+			if (!array[j])
+				return (-1);
+			j++;
 			fword = -1;
 		}
 		i++;
 	}
 	array[j] = NULL;
+	return (0);
+}
+
+char	**ft_split(const char *s, char c)
+{
+	char	**array;
+
+	if (s == 0)
+		return (NULL);
+	array = malloc(sizeof(char *) * (wordsnumb(s, c) + 1));
+	if (array == 0)
+		return (NULL);
+	if (loop_split(array, s, c) == -1)
+		return (ft_free(array, wordsnumb(s, c)));
 	return (array);
 }
 /*

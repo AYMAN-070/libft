@@ -6,20 +6,20 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 15:54:25 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/13 15:21:10 by ayhammou         ###   ########.fr       */
+/*   Updated: 2025/11/14 16:32:09 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	var_dec(long *nbr, long *tmp, int *alloc, int n)
+static void	var_dec(long *nbr, long *tmp, int *alloc, int n)
 {
 	*nbr = n;
 	*tmp = n;
 	*alloc = 0;
 }
 
-int	verification(long tmp, int alloc)
+static int	verification(long tmp, int alloc)
 {
 	if (tmp == 0)
 	{

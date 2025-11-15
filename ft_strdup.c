@@ -6,21 +6,22 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 10:00:46 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/13 16:14:29 by ayhammou         ###   ########.fr       */
+/*   Updated: 2025/11/15 14:19:09 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
 	char	*dup;
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
+	if (!s)
+		return (NULL);
 	while (s[i])
 		i++;
 	dup = malloc(sizeof (char) * (i + 1));

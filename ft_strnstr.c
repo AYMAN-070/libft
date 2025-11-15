@@ -6,7 +6,7 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 12:05:22 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/12 17:25:20 by ayhammou         ###   ########.fr       */
+/*   Updated: 2025/11/14 13:39:28 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	if (*little == '\0')
 		return ((char *) big);
+	if (len == 0)
+		return (NULL);
 	while (big[i] && i < len)
 	{
 		j = 0;

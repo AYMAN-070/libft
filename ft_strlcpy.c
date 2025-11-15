@@ -6,7 +6,7 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:45:26 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/12 15:24:42 by ayhammou         ###   ########.fr       */
+/*   Updated: 2025/11/14 11:50:07 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	i = 0;
 	len = 0;
+	if (src == 0)
+		return (0);
 	while (src[len])
 		len++;
-	if (size == 0)
+	if (dst == 0 || size == 0)
 		return (len);
 	while ((size - 1) > i && src[i])
 	{

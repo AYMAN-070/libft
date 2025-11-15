@@ -6,13 +6,13 @@
 /*   By: ayhammou <ayhammou@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 15:29:54 by ayhammou          #+#    #+#             */
-/*   Updated: 2025/11/11 11:49:56 by ayhammou         ###   ########.fr       */
+/*   Updated: 2025/11/14 16:33:33 by ayhammou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*fill(char *join, char *str1, char *str2)
+static char	*fill(char *join, char *str1, char *str2)
 {
 	int	i;
 	int	j;
@@ -42,8 +42,10 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	int		len1;
 	int		len2;
 
-	if (s1 == 0 || s2 == 0)
-		return (NULL);
+	if (s1 == 0)
+		s1 = "";
+	if (s2 == 0)
+		s2 = "";
 	str1 = (char *)s1;
 	str2 = (char *)s2;
 	len1 = 0;
